@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>如何在博客文章中嵌入音乐</title>
+    <link href="/2019/12/30/%E7%BD%91%E9%A1%B5%E5%B5%8C%E5%85%A5%E9%9F%B3%E4%B9%90/"/>
+    <url>/2019/12/30/%E7%BD%91%E9%A1%B5%E5%B5%8C%E5%85%A5%E9%9F%B3%E4%B9%90/</url>
+    
+    <content type="html"><![CDATA[<p>阅读一篇文章时，文字修辞手法不够烘托出感情色彩时，你需要一点音乐来帮助你，这篇文章记录着我的小情调</p><a id="more"></a><h2 id="Markdown-一门很神奇的语言"><a href="#Markdown-一门很神奇的语言" class="headerlink" title="Markdown 一门很神奇的语言"></a>Markdown 一门很神奇的语言</h2><p>在md文件中嵌入html标签可以达到嵌入音乐的目的，为啥是md文件而不是html文件呢？因为博客文章大部分都是用md编写然后通过框架转成html结构，其实markdown算是html的兄弟，都是标记语言</p><p><strong>注意 ：本篇文章所用音乐及其来源切勿作于商业用途，仅供学习和参考</strong></p><h3 id="audio-标签"><a href="#audio-标签" class="headerlink" title="audio 标签"></a>audio 标签</h3><pre><code class="html">&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;  &lt;source src=&quot;音乐资源路径&quot; type=&quot;audio/mp3&quot; /&gt;&lt;/audio&gt;</code></pre><audio controls="controls">  <source src="http://m8.music.126.net/20191230155935/e94c9276e1546d89729d7ee6f5adb390/ymusic/0459/045c/520c/330c359473365e50a368ef0d43bc612f.mp3" type="audio/mp3" /></audio><p>audio属于html 5的元素，在html 4中不支持，但对于大部分浏览器而言还是支持的 </p><h3 id="网易云音乐生成外部链接"><a href="#网易云音乐生成外部链接" class="headerlink" title="网易云音乐生成外部链接"></a>网易云音乐生成外部链接</h3><p>缺点现在很明显就是很多好听喜欢的歌曲不能分享生成外部链接了(由于版权保护，暂不支持分享🤣)，如何生成外部链接🤔，请自行百度or谷歌，其实就是打开网页版的网易云音乐，很快就能找到了</p><pre><code class="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;生成的链接&quot;&gt;&lt;/iframe&gt;</code></pre><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=542541179&auto=1&height=66"></iframe>仔细查看资源链接会发现后面有type,id,auto等字段，id是歌曲编码，auto是自动播放，自动播放在chrome上好像不生效，手机浏览器上可生效，还可以生成歌单外链也可以使用，只不过我没有看到就不做多的演示了，点到为止<h3 id="embed-标签"><a href="#embed-标签" class="headerlink" title="embed 标签"></a>embed 标签</h3><p>这两个都是引用外部内容的容器，什么地图，音频，视频都是外部内容，使用的时候兼容性不佳，可能会出现空白或者无法播放情况</p><pre><code class="html">&lt;embed height=&quot;100&quot; width=&quot;100&quot; src=&quot;音乐资源路径&quot; /&gt;</code></pre><p><embed        height="100"        width="50%"       src="http://m7.music.126.net/20191230162141/bf97b91a65916183c8e300e2ecf0b879/ymusic/5608/0e09/0f53/abf0f817349caa55389a890edfffa21e.mp3" /></p><p>⚡警告⚡ ⚡警告⚡ ⚡警告⚡</p><p>最后推荐一个最佳适配方案，audio 和 embed结合使用，提高兼容性</p><pre><code class="html">&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;  &lt;source src=&quot;音乐资源路径&quot; type=&quot;audio/mp3&quot; /&gt;    &lt;embed height=&quot;100&quot; width=&quot;100&quot; src=&quot;音乐资源路径&quot; /&gt;&lt;/audio&gt;</code></pre><audio controls="controls" autoplay="autoplay" height="100" width="100">  <source src="http://m7.music.126.net/20191230171949/ddc6b1674664bf31bdd4851dd58a5372/ymusic/0058/050b/050c/722ab2fd3f2af0a151ad2f2840959bc8.mp3" type="audio/mp3" />      <embed height="100" width="100" src="https://m7.music.126.net/20191230162141/bf97b91a65916183c8e300e2ecf0b879/ymusic/5608/0e09/0f53/abf0f817349caa55389a890edfffa21e.mp3" /></audio><p>好了，赶紧打开笔记本电脑动手试试吧📏</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>小技能</tag>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>学会看懂UML图</title>
     <link href="/2018/01/12/UML%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9B%BE%E5%8F%8A%E7%B1%BB%E5%9B%BE%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
     <url>/2018/01/12/UML%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9B%BE%E5%8F%8A%E7%B1%BB%E5%9B%BE%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
